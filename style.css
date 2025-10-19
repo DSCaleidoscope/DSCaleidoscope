@@ -21,13 +21,61 @@ a, a:visited, a:hover, a:checked {
   margin-top: 25px;
 }
 
-#whatContent {
+#whatContent, #learnContent {
   position: relative;
   width: 36%;
   left: 32%;
   border: 3px solid #A7A392;
   padding: 15px;
   border-radius: 0px 0px 25px 25px;
+}
+
+.masterContent {
+  position: relative;
+  width: 36%;
+  left: 32%;
+  border: 3px solid #A7A392;
+  padding: 15px;
+  border-radius: 0px 0px 25px 25px;
+}
+
+.arrow {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 0px 40px;
+  position: relative;
+}
+
+.arrowLeft:hover {
+  animation-name: aLeft;
+  animation-duration: 0.5s;
+}
+
+@keyframes aLeft{
+  from{left: 0px;}
+  to{left: -10px;}
+}
+
+
+.arrowRight:hover {
+  animation-name: aRight;
+  animation-duration: 0.5s;
+}
+
+@keyframes aRight {
+  from {left: 0px;}
+  to {left: 10px;}
+}
+
+.arrow::selection {
+    background: transparent;
+}
+
+.arrowText {
+  padding: 0px 0px;
+  font-weight: initial;
 }
 
 .whatIsTitle {
@@ -70,6 +118,24 @@ a, a:visited, a:hover, a:checked {
     background: #A7A392;
   }
 
+  .section::selection {
+    background: transparent;
+  }
+
+
+.noSel{
+  transition-property: color;
+  transition-duration: 0.5s
+}
+
+.noSel::selection {
+  background: transparent;
+}
+
+.noSel:hover {
+  cursor: pointer;
+  color: #A7A392;
+}
 
 @media only screen and (max-device-width: 430px) {
   #whatContent {
@@ -80,6 +146,15 @@ a, a:visited, a:hover, a:checked {
     padding: 15px;
     border-radius: 0px 0px 25px 25px;
     min-width: 333px;
+  }
+
+  .masterContent {
+    position: relative;
+    width: 36%;
+    left: 32%;
+    border: 3px solid #A7A392;
+    padding: 15px;
+    border-radius: 0px 0px 25px 25px;
   }
 
   .section {
@@ -99,8 +174,17 @@ a, a:visited, a:hover, a:checked {
     padding: 15px;
     min-width: 333px;
   }
+
+    .section::selection {
+      background: transparent;
+    }
 }
 
 @media only screen and (max-device-width: 768px) {
   /* Styles */
+}
+
+/* Animations */
+.invisible {
+display: none;
 }

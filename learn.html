@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web donde el autor D. S. Caleidoscope muestra el progreso de sus proyectos">
+  <meta name="keywords" content="Autor proyectos progreso">
+  <meta name="author" content="D. S. Caleidoscope">
+  <title>D. S. Caleidoscope</title>
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <script type="text/javascript" src="fun.js"></script>
+</head>
+<body id="mbody">
+  <a id="gList"></a>
+  <div id="mainScreen">
+    <div id="mtitle">¡Aprende a maquetar con Cale!</div>
+    <div id="whatIs">
+      <div class="section" id="indexSection" onclick="collapse('index', 98);">&Iacute;ndice</div>
+      <div id="indexContent" class="masterContent">
+        <div class="whatIsText">
+          A continuación te mostramos el &iacute;ndice de secciones.<br />
+          Recuerda que siempre tienes la opci&oacute;n de contactar conmigo para que sea yo quien maquete tu libro 😁<br />
+          <ul class="whatIsList">
+            <li>Precio por maquetaci&oacute;n b&aacute;sica: 80€</li>
+            <li>Precio por maquetaci&oacute;n b&aacute;sica recurrente: 60€</li>
+            <li>Maquetaci&oacute;n especial / gran vol&uacute;men / otros: Consultar</li>
+          </ul>
+          Usa las flechas para desplazarte entre las diapositivas. Si necesitas saltar de secci&oacute;n, puedes usar el &iacute;ndice.<br /><br />
+          <b>Lista de contenido</b><br />
+          <span id="toc"></span>
+        </div>
+      </div>
+
+      <div class="whatIsText">
+        <div class="arrow arrowLeft" onclick="moveLeft();">&lt;</div><span id="numberOf" class="arrow arrowText"></span><span class="arrow arrowText">&nbsp;/&nbsp;</span><span id="numberTot" class="arrow arrowText"></span><div class="arrow arrowRight" onclick="moveRight();">&gt;</div>
+      </div>
+      <!--
+      Esto está en proceso...
+    <div class="section step"></div>
+    <div class="masterContent step">
+      <div class="whatIsTitle">Aclaraciones previas</div>
+      <div class="whatIsText">
+        111
+      </div>
+    </div>
+    <div class="section step"></div>
+    <div class="masterContent step">
+      <div class="whatIsText">
+        222
+      </div>
+    </div>
+  </div>
+  <div class="section step"></div>
+  <div class="masterContent step">
+    <div class="whatIsTitle">Segundo punto</div>
+    <div class="whatIsText">
+      111
+    </div>
+  </div>
+      -->
+      <div id="bbody">
+        <script type="text/javascript">
+          let x = 1;
+          let y = 3;
+
+          collapse('index', 98);
+          collapse('index', 98);
+
+          //mark everything
+          markSteps();
+
+          setStep(1);
+        </script>
+      </div>
+    </div>
+</body>
+</html>
+
